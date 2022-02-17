@@ -48,7 +48,6 @@ const Demo = () => {
 
 ## Reference
 
-
 ```ts
 const [ref, state] = useScratch();
 
