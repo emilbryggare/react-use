@@ -48,8 +48,12 @@ const Demo = () => {
 
 ## Reference
 
+
 ```ts
 const [ref, state] = useScratch();
+
+// Optional params, see ScratchSensorParams type below
+const [ref, state] = useScratch(scratchSensorParams);
 ```
 
 `state` is:
@@ -71,5 +75,15 @@ export interface ScratchSensorState {
   elW?: number;
   elX?: number;
   elY?: number;
+}
+```
+
+`scratchSensorParams` is:
+```ts
+export interface ScratchSensorParams {
+  disabled?: boolean;
+  onScratch?: (state: ScratchSensorState) => void;
+  onScratchStart?: (state: ScratchSensorState) => void;
+  onScratchEnd?: (state: ScratchSensorState) => void;
 }
 ```
